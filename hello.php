@@ -4,8 +4,8 @@
     <!-- … -->
 </head>
 <body>
-    Я новая страничка!!!1111 =)
-    <br>
-    <img src="/img/025_picture-47918.gif" alt="Стас Барецкий упал с лестницы">
+<pre>
+<?php print_r($_SERVER["REQUEST_URI"]) ?>
+</pre>
 </body>
 </html>
