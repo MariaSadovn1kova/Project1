@@ -30,15 +30,21 @@
         </div>
     </div>
 </nav>
-<div class="container">
-        <?php if ($_SERVER["REQUEST_URI"] == "/") { ?>
-            Главная
-        <?php } elseif ($_SERVER["REQUEST_URI"] == "/dangeon") { ?>
-            Тут мы вам расскажем о Лиге Теней
-        <?php } elseif ($_SERVER["REQUEST_URI"] == "/sylvan") { ?>
-            Тут мы вам расскажем о Лесном Союзе
-        <?php } ?>
-    </div>
 </pre>
+<div class="container">
+    <?php 
+    $url = $_SERVER["REQUEST_URI"];
+
+    echo "Вы на странице: $url, будьте внимательны!<br>";
+
+    if ($url == "/") {
+        require "../views/main.php";
+    } elseif ($url == "/dangeon") {
+        require "../views/dangeon.php";
+    } elseif ($url == "/sylvan") {
+        require "../views/sylvan.php";
+    } 
+    ?>
+</div>
 </body>
 </html>
