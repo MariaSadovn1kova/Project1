@@ -21,7 +21,7 @@
             <a class="nav-link active" aria-current="page" href="/">Главная</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/dangeon">Лига теней</a>
+            <a class="nav-link" href="/dungeon">Лига теней</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="/sylvan">Лесной союз</a>
@@ -39,8 +39,8 @@
 
     if ($url == "/") {
         require "../views/main.php";
-    } elseif ($url == "/dangeon") {
-        require "../views/dangeon.php";
+    } elseif ($url == "/dungeon") {
+        require "../views/dungeon.php";
     } elseif ($url == "/sylvan") {
         require "../views/sylvan.php";
     } 
