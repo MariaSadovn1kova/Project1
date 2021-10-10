@@ -34,7 +34,6 @@
 <div class="container">
     <?php 
     $url = $_SERVER["REQUEST_URI"];
-
     // Проверка строки на частичное соответствие
     if ($url == "/") {
         require "../views/main.php";
@@ -45,5 +44,6 @@
     } 
     ?>
 </div>
+
 </body>
 </html>
