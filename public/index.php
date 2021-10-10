@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-    <a class="navbar-brand" href="#"><i class="fas fa-meteor"></i></a>
+    <a class="navbar-brand" href="#"><i class="fas fa-dragon"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,13 +35,12 @@
     <?php 
     $url = $_SERVER["REQUEST_URI"];
 
-    echo "Вы на странице: $url, будьте внимательны!<br>";
-
+    // Проверка строки на частичное соответствие
     if ($url == "/") {
         require "../views/main.php";
-    } elseif ($url == "/dungeon") {
+    } elseif (preg_match("#^/dungeon#", $url)) {
         require "../views/dungeon.php";
-    } elseif ($url == "/sylvan") {
+    } elseif (preg_match("#^/sylvan#", $url)) {
         require "../views/sylvan.php";
     } 
     ?>
